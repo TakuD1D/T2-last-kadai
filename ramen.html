@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ラーメン紹介ページ</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #fde6cc; /* ラーメン風の色合い */
+            color: #663300; /* 茶色っぽい文字色 */
+        }
+
+        h1 {
+            color: #ff8000; /* オレンジっぽい色 */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #cc5200; /* ラーメン風の色合い */
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 20px;
+            display: block;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            background-color: #994d00; /* より濃い色に変化 */
+        }
+
+        #sliding-image-container {
+            overflow: hidden;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        #sliding-image-container img {
+            width: 50%; /* 画像を親要素に合わせる */
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            cursor: grab;
+        }
+
+        #sliding-image-container img:active {
+            cursor: grabbing;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* 必要に応じてギャップを調整 */
+        }
+
+        
+        .search-container {
+            flex: 1; /* 残りのスペースを占める */
+            max-width: 300px; /* 小さくした幅 */
+            margin-left: auto; /* 右寄せ */
+            margin-bottom: 0; /* 下の余白を削除 */
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .search-container input[type="text"] {
+            width: calc(100% - 20px); /* 要素のpaddingを考慮して幅を設定 */
+            padding: 8px; /* 少し小さく */
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+        }
+
+        h2 {
+            color: #ff8000; /* オレンジっぽい色 */
+        }
+
+        /* レスポンシブな調整 */
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column; /* 小さい画面では要素を重ねる */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>おすすめのラーメン店</h1>
+
+    <nav>
+        <ul>
+            <li><a href="#popular-ramen">人気のラーメン屋</a></li>
+            <li><a href="#miso-ramen">濃厚味噌ラーメン専門店</a></li>
+            <li><a href="#vegetarian-ramen">ベジタリアン対応のラーメン</a></li>
+        </ul>
+    </nav>
+
+    <!-- スライドする画像を含むコンテナ -->
+    <div class="container">
+        <!-- スライドする画像を含むコンテナ -->
+        <div id="sliding-image-container">
+            <img id="dynamic-image" src="https://spice.kumanichi.com/spice/wp-content/uploads/2022/09/605b822b9e4bc78b60eeb60bc7965bc8-1200x1200.jpg" alt="人気のラーメン">
+        </div>
+
+        <!-- 検索ボックスを含むコンテナ -->
+        <ul class="search-container">
+            <li>
+                <h2 style="color: #ff8000;">ラーメンを検索</h2>
+                <input type="text" id="search-box" name="search-box" placeholder="ラーメンを検索...">
+            </li>
+        </ul>
+    </div>
+
+    <h2 id="popular-ramen">1. 人気のラーメン屋</h2>
+    <p>このラーメン屋は地元で非常に人気があり、特に醤油ラーメンがおすすめです。</p>
+    <img src="https://media.istockphoto.com/id/1179781320/ja/ストックフォト/日本のラーメン.jpg?s=600" alt="人気のラーメン">
+
+    <!-- 以下、同様に続きます... -->
+
+</body>
+
+</html>
