@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ラーメン店1</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #fde6cc; /* ラーメン風の色合い */
+            color: #663300; /* 茶色っぽい文字色 */
+        }
+
+        h1 {
+            color: #ff8000; /* オレンジっぽい色 */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .restaurant {
+            max-width: 300px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+
+        .restaurant img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #ff8000; /* オレンジっぽい色 */
+        }
+
+        #home-link {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            background-color: #cc5200; /* ラーメン風の色合い */
+            color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        #home-link:hover {
+            background-color: #994d00; /* より濃い色に変化 */
+        }
+    </style>
+</head>
+
+<body>
+    <a id="home-link" href="#">Home</a>
+
+    <h1>ラーメン店1</h1>
+
+    <div class="restaurant">
+        <img src="https://example.com/ramen1.jpg" alt="ラーメン店1">
+        <h2>ラーメン店1</h2>
+        <p>こちらは人気のラーメン店です。特に醤油ラーメンがおすすめです。</p>
+    </div>
+
+    <script>
+        document.getElementById('home-link').addEventListener('click', function () {
+            history.back();
+        });
+    </script>
+</body>
+
+</html>
