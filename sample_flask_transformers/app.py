@@ -25,7 +25,7 @@ def search():
     search_score, search_index = shops_index.search(embedding,3)
     results = []
     for  i in range(len(search_index[0])):
-        results.append(df_ramen.iloc[search_index[0][i]])
+        results.append(df_ramen.iloc[search_index[0][i]].astype(str))
     return render_template('search_results.html', results=results)
 
 if __name__ == '__main__':

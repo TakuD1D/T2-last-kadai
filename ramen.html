@@ -51,52 +51,31 @@
             background-color: #994d00; /* より濃い色に変化 */
         }
 
-        #sliding-image-container {
-            overflow: hidden;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            position: relative;
-        }
-
-        #sliding-image-container img {
-            width: 50%; /* 画像を親要素に合わせる */
-            height: auto;
-            display: block;
-            border-radius: 8px;
-            cursor: grab;
-        }
-
-        #sliding-image-container img:active {
-            cursor: grabbing;
-        }
-
         .container {
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px; /* 必要に応じてギャップを調整 */
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
         }
 
-        
         .search-container {
-            flex: 1; /* 残りのスペースを占める */
-            max-width: 300px; /* 小さくした幅 */
-            margin-left: auto; /* 右寄せ */
-            margin-bottom: 0; /* 下の余白を削除 */
+            flex: 1;
+            max-width: 300px; /* Adjust the max-width as needed */
             background-color: #fff;
-            padding: 10px;
-            border-radius: 8px;
+            padding: 20px;
+            border-radius: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             transition: box-shadow 0.3s ease-in-out;
+            text-align: center;
         }
 
         .search-container input[type="text"] {
-            width: calc(100% - 20px); /* 要素のpaddingを考慮して幅を設定 */
-            padding: 8px; /* 少し小さく */
+            width: calc(100% - 16px); /* Take up the full width of the container, considering padding and border */
+            padding: 8px;
             box-sizing: border-box;
-            border: 1px solid #ccc;
+            border: 2px solid #ccc; /* Adjust border thickness as needed */
             border-radius: 4px;
         }
-
 
         @media screen and (max-width: 600px) {
             body {
@@ -118,38 +97,25 @@
 </head>
 
 <body>
-    <h1>おすすめのラーメン店</h1>
+    <h1> 〜八王子らーめん〜 </h1>
 
     <nav>
         <ul>
-            <li><a href="#popular-ramen">人気のラーメン屋</a></li>
-            <li><a href="#miso-ramen">濃厚味噌ラーメン専門店</a></li>
-            <li><a href="#vegetarian-ramen">ベジタリアン対応のラーメン</a></li>
+            <li><a href="1-1.html">人気のラーメン屋</a></li>
+            <li><a href="1-2.html">濃厚味噌ラーメン専門店</a></li>
+            <li><a href="1-3.html">ベジタリアン対応のラーメン</a></li>
         </ul>
+        <div class="search-container">
+            <input type="text" id="search-box" name="search-box" placeholder="ラーメンを検索...">
+        </div>
     </nav>
 
-    <!-- スライドする画像を含むコンテナ -->
     <div class="container">
-        <!-- スライドする画像を含むコンテナ -->
-        <div id="sliding-image-container">
-            <img id="dynamic-image" src="https://spice.kumanichi.com/spice/wp-content/uploads/2022/09/605b822b9e4bc78b60eeb60bc7965bc8-1200x1200.jpg" alt="人気のラーメン">
-        </div>
-
-        <!-- 検索ボックスを含むコンテナ -->
-        <ul class="search-container">
-            <li>
-                <h2 style="color: #ff8000;">ラーメンを検索</h2>
-                <input type="text" id="search-box" name="search-box" placeholder="ラーメンを検索...">
-            </li>
-        </ul>
+        <h2 id="popular-ramen">1. 人気のラーメン屋</h2>
+        <p>このラーメン屋は地元で非常に人気があり、特に醤油ラーメンがおすすめです。</p>
     </div>
-
-    <h2 id="popular-ramen">1. 人気のラーメン屋</h2>
-    <p>このラーメン屋は地元で非常に人気があり、特に醤油ラーメンがおすすめです。</p>
-    <img src="https://media.istockphoto.com/id/1179781320/ja/ストックフォト/日本のラーメン.jpg?s=600" alt="人気のラーメン">
-
-    <!-- 以下、同様に続きます... -->
-
 </body>
 
 </html>
+
+
